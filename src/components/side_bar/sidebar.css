@@ -47,7 +47,7 @@
 }
 
 .sidebar .recent-entry {
-    margin-right: 10px;
+    margin-right: auto;
     display: flex;
     align-items: start;
     gap: 10px;
