@@ -10,6 +10,10 @@ const ContextProvider = (props) => {
     const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
     const [resultData, setResultData] = useState("");
+
+    const delayPara = (index, nextWord) => {
+        // https://youtu.be/0yboGn8errU?t=5079
+    }
     
     const onSent = async (prompt) => {
         setResultData("")

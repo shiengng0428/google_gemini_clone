@@ -15,6 +15,13 @@ const Main = () => {
         input,
         setInput } = useContext(Context);
 
+    const handleKeyPress = (e) => {
+        // press enter key also will sent the function
+        if (e.key === 'Enter') {
+            onSent();
+        }
+    }
+
     return (
         <div className="main">
             <div className="nav">
@@ -73,7 +80,7 @@ const Main = () => {
 
                 <div className="main-bottom">
                     <div className="search-box">
-                        <input onChange={(e) => setInput(e.target.value)} type="text" placeholder='Enter a prompt here' />
+                        <input onChange={(e) => setInput(e.target.value)} value={input} onKeyPress={handleKeyPress} type="text" placeholder='Enter a prompt here' />
                         <div>
                             <img src={assets.gallery_icon} alt="" />
                             <img src={assets.mic_icon} alt="" />
